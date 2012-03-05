@@ -47,16 +47,26 @@
 <div id="content">
 <h1>Get and install Contenticious</h1>
 
-<p>Get the latest Contenticious version, either by downloading and extracting
-the latest release tarball from the <a href="https://github.com/memowe/contenticious/tags">Contenticious tags page</a>
-or by cloning the whole repository via</p>
+<p>Installing Contenticious is easy since it's a CPAN module. Just use your
+standard procedure to install it, which would be something like</p>
+
+<pre><code>$ cpan Contenticious
+</code></pre>
+
+<p>That would download Contenticious and its dependencies, run tests and
+finally install it.</p>
+
+<p><strong>Done.</strong></p>
+
+<h2>Development versions</h2>
+
+<p>To use the latest development version, you need to clone the source repository:</p>
 
 <pre><code>$ git clone git://github.com/memowe/contenticious.git
 </code></pre>
 
-<p>Maybe you'll need to install some dependencies, that are not core modules.
-Don't worry, <a href="https://github.com/memowe/contenticious/blob/master/Makefile.PL#L21">not that much</a>. With <a href="https://metacpan.org/module/App::cpanminus">cpanminus</a> you can install
-all needed dependencies and Contenticious itself in a very easy way:</p>
+<p>With <a href="https://metacpan.org/module/App::cpanminus">cpanminus</a> you can install all needed dependencies
+and Contenticious itself from here:</p>
 
 <pre><code>$ cd contenticious
 $ cpanm --sudo .
@@ -64,15 +74,17 @@ $ cpanm --sudo .
 
 <p><strong>Done.</strong></p>
 
-<p>The traditional way is also possible.
-You can use your standard procedure to install Perl modules
-since Contenticious ships with a <code>Makefile.PL</code> and tests:</p>
+<p>The traditional way is also possible since Contenticious ships with
+a <code>Makefile.PL</code>:</p>
 
-<pre><code>$ perl Makefile.PL
+<pre><code>$ cd contenticious
+$ perl Makefile.PL
 $ make
 $ make test
 $ sudo make install
 </code></pre>
+
+<p><strong>Done.</strong></p>
 
 <p>Next step: <a href="prepare.html">Prepare your first Contenticious site</a></p>
 
