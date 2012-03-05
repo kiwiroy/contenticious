@@ -42,6 +42,8 @@
 with the site structure. Now you need to publish that content, so everyone
 in the web can look at it. Easy!</p>
 
+<h2>Generate static HTML</h2>
+
 <p>The following command generates static HTML pages. After it's done you'll find
 your <code>.html</code> files in the <code>dump</code> directory including everything from <code>public</code>.</p>
 
@@ -51,6 +53,23 @@ dumping everything to /Users/memowe/Desktop/foo/dump ...
 done!</code></pre>
 
 <p>Just upload it to your web hoster. Done. :-)</p>
+
+<h2>Using <code>hypnotoad</code> as a production server</h2>
+
+<p>Since Contenticious is a Mojolicious app, you can use Mojolicious' popular
+production server <code>hypnotoad</code> with Contenticious:</p>
+
+<pre><code>$ hypnotoad webapp.pl
+</code></pre>
+
+<p>Check <code>http://localhost:8080</code>, it should look like the simple <code>daemon</code> version.
+To stop hypnotoad, execute it with the <code>--stop</code> option:</p>
+
+<pre><code>$ hypnotoad --stop webapp.pl
+</code></pre>
+
+<p>Maybe you want to read the <a href="http://mojolicio.us/perldoc/Mojolicious/Guides/Cookbook#Hypnotoad">deployment section</a> of the excellent
+Mojolicious cookbook to learn more. Or read <a href="http://mojolicio.us/perldoc/Mojo/Server/Hypnotoad">more about hypnotoad</a>.</p>
 
 <h2>Advanced methods</h2>
 
