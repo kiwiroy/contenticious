@@ -68,6 +68,21 @@ To stop hypnotoad, execute it with the <code>--stop</code> option:</p>
 <pre><code>$ hypnotoad --stop webapp.pl
 </code></pre>
 
+<p>Use your contenticious <code>config</code> file to configure hypnotoad:</p>
+
+<pre><code>{
+    ...
+    cached      =&gt; 0,
+
+    // production server configuration
+    hypnotoad   =&gt; {
+        listen  =&gt; ['http://*:3000'], 
+        workers =&gt; 10,  
+        proxy   =&gt; 1,
+    },
+}
+</code></pre>
+
 <p>Maybe you want to read the <a href="http://mojolicio.us/perldoc/Mojolicious/Guides/Cookbook#Hypnotoad">deployment section</a> of the excellent
 Mojolicious cookbook to learn more. Or read <a href="http://mojolicio.us/perldoc/Mojo/Server/Hypnotoad">more about hypnotoad</a>.</p>
 
